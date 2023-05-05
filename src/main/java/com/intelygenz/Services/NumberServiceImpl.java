@@ -38,15 +38,4 @@ public class NumberServiceImpl implements NumberService {
         Collections.sort(numberList, compareByBitCount);
         return numberList;
     }
-    
-    private Integer convertToBynary(Integer number) {
-        String binaryRepresentation = Integer.toBinaryString(number);
-        int onesInString = 0;
-        for (int i = 0; i < binaryRepresentation.length(); i++) {
-            if(binaryRepresentation.charAt(i) == '1') {
-                onesInString++;
-            }
-        }
-        return onesInString;
-    }
 }
